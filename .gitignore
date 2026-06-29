@@ -1,0 +1,43 @@
+# Data files — never commit raw or processed data
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.json
+*.zip
+
+# Keep sample directory but ignore its contents except placeholder
+data/sample/*
+!data/sample/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# GCP / credentials — NEVER commit these
+*.json
+service-account*.json
+gcp-key*.json
+credentials/

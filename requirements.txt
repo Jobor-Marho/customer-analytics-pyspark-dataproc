@@ -1,0 +1,6 @@
+# Core — PySpark is pre-installed on GCP Dataproc.
+# Listed here for local development, linting, and IDE support.
+pyspark>=3.3.0
+
+# Optional: local testing without a cluster
+# findspark>=2.0.1
