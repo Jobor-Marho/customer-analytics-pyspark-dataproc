@@ -1,5 +1,7 @@
 # Pipeline Overview
 
+> For full column-level schema documentation of every DataFrame, see the CSV files in this same `docs/` folder: `schema_all_dataframes.csv` (combined) or the per-module versions.
+
 ## Architecture
 
 ```
@@ -11,13 +13,13 @@ Local Machine  ──curl──►  olist/data/*.csv
      ▼  hdfs dfs -put
 HDFS  /user/<username>/project/olist/data/
      │
-     ▼   1 — Data Ingestion & Exploration
+     ▼  Module 1 — Ingestion & Exploration
 Spark (Dataproc)  ── row counts, nulls, duplicates, distributions
      │
-     ▼   2 — Data Cleaning & Transformation
+     ▼  Module 2 — Cleaning & Transformation
 HDFS  /user/<username>/project/olist/processed/  (Parquet)
      │
-     ▼   3 — Data Integration & Aggregation
+     ▼  Module 3 — Integration & Aggregation
 HDFS  /user/<username>/project/olist/analyzed/   (Parquet)
 Hive  olist.*  (tables)
 ```
