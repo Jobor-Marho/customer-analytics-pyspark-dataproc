@@ -1,3 +1,20 @@
 # Core — PySpark is pre-installed on GCP Dataproc.
+# However, if you want to run this project locally, you can install the listed requirements below:
 pyspark>=3.3.0
 
+# Jupyter — needed to open and run the notebooks locally
+jupyterlab>=4.0.0
+notebook>=7.0.0
+ipykernel>=6.25.0
+
+# Helps PySpark locate your local Spark/Java install when not on Dataproc
+findspark>=2.0.1
+
+# Used in Module 2 for missing-value imputation (pyspark.ml.feature.Imputer
+# ships with PySpark itself, but numpy is a required dependency under the hood)
+numpy>=1.24.0
+
+# Optional — only needed if you want to inspect/plot DataFrames locally
+# by converting Spark DataFrames to pandas (e.g. df.toPandas())
+pandas>=2.0.0
+matplotlib>=3.7.0
