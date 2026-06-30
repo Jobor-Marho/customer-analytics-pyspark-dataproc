@@ -34,6 +34,12 @@ olist_sellers_dataset.csv
 product_category_name_translation.csv
 ```
 
+### Entity Relationship Diagram
+
+![Olist database schema](docs/images/db_schema.png)
+
+`olist_orders_dataset` is the central table — it joins to payments and reviews on `order_id`, to customers on `customer_id`, and to order items on `order_id`. Order items then link out to products (`product_id`) and sellers (`seller_id`), and both customers and sellers connect to geolocation via `zip_code_prefix`.
+
 > Raw data files are **not** committed to this repository. See [Data Setup](#data-setup) below.
 
 ---
@@ -64,6 +70,19 @@ olist-pyspark/
 ├── requirements.txt
 └── README.md
 ```
+
+---
+
+## Schema Reference
+
+Every DataFrame produced across the three modules — column names, types, nullability, keys, and descriptions — is documented in `docs/`:
+
+| File | Covers |
+|------|--------|
+| `schema_all_dataframes.csv` | All 31 DataFrames, combined |
+| `schema_module_1_ingestion.csv` | Raw DataFrames loaded from HDFS (9 datasets) |
+| `schema_module_2_cleaning.csv` | Cleaned DataFrames after imputation, schema fixes, and feature engineering (9 datasets) |
+| `schema_module_3_aggregation.csv` | Joined and aggregated analytics DataFrames (13 outputs) |
 
 ---
 
@@ -144,4 +163,4 @@ See `requirements.txt`. Core dependencies:
 pyspark>=3.3.0
 ```
 
-> PySpark is pre-installed on Dataproc. `requirements.txt` is mainly useful for local development.
+> PySpark is pre-installed on Dataproc. `requirements.txt` is mainly useful for local development or linting.

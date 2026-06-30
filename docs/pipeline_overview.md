@@ -1,6 +1,8 @@
 # Pipeline Overview
 
 > For full column-level schema documentation of every DataFrame, see the CSV files in this same `docs/` folder: `schema_all_dataframes.csv` (combined) or the per-module versions.
+>
+> For the source dataset's entity relationships, see `docs/images/db_schema.png`.
 
 ## Architecture
 
