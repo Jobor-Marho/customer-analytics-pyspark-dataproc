@@ -55,7 +55,11 @@ olist-pyspark/
 ├── data/
 │   └── sample/                     # Small sample CSVs for local testing (optional)
 ├── docs/
-│   └── pipeline_overview.md        # Architecture and pipeline notes
+│   ├── pipeline_overview.md            # Architecture and pipeline notes
+│   ├── schema_all_dataframes.csv       # Combined schema dictionary for every DataFrame
+│   ├── schema_module_1_ingestion.csv   # Schema for raw DataFrames (Module 1)
+│   ├── schema_module_2_cleaning.csv    # Schema for cleaned DataFrames (Module 2)
+│   └── schema_module_3_aggregation.csv # Schema for aggregated DataFrames (Module 3)
 ├── .gitignore
 ├── requirements.txt
 └── README.md
