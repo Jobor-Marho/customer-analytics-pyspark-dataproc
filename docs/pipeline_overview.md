@@ -70,7 +70,7 @@ Hive  olist.*  (tables)
 
 | Technique | Applied to |
 |-----------|-----------|
-| `broadcast()` | products (~1.3 MB), sellers (~128 KB), categories (~3 KB), payments (~3.7 MB) |
+| `broadcast()` | products, sellers , categories , payments  |
 | Adaptive Query Execution (AQE) | All joins and shuffles |
 | AQE skew join handling | Customer and geolocation joins |
 | Partition tuning (`shuffle.partitions=64`) | All aggregations |
