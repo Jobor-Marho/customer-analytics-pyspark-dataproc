@@ -1,14 +1,9 @@
 # Data files — never commit raw or processed data
-data/raw/
-data/processed/
+data/
 *.csv
 *.parquet
 *.json
 *.zip
-
-# Keep sample directory but ignore its contents except placeholder
-data/sample/*
-!data/sample/.gitkeep
 
 # Python
 __pycache__/

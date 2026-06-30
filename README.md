@@ -48,6 +48,16 @@ product_category_name_translation.csv
 
 ```
 olist-pyspark/
+├── configs/
+│   └── spark_config.py             # Centralised Spark tuning config
+├── docs/
+│   ├── images/
+│   │   └── db_schema.png               # Entity relationship diagram
+│   ├── pipeline_overview.md            # Architecture and pipeline notes
+│   ├── schema_all_dataframes.csv       # Combined schema dictionary for every DataFrame
+│   ├── schema_module_1_ingestion.csv   # Schema for raw DataFrames (Module 1)
+│   ├── schema_module_2_cleaning.csv    # Schema for cleaned DataFrames (Module 2)
+│   └── schema_module_3_aggregation.csv # Schema for aggregated DataFrames (Module 3)
 ├── notebooks/
 │   ├── 01_data_ingestion_exploration.ipynb
 │   ├── 02_data_cleaning_transformation.ipynb
@@ -56,16 +66,6 @@ olist-pyspark/
 │   └── utils/
 │       ├── spark_session.py        # SparkSession factory
 │       └── helpers.py              # Reusable helper functions
-├── configs/
-│   └── spark_config.py             # Centralised Spark tuning config
-├── data/
-│   └── sample/                     # Small sample CSVs for local testing (optional)
-├── docs/
-│   ├── pipeline_overview.md            # Architecture and pipeline notes
-│   ├── schema_all_dataframes.csv       # Combined schema dictionary for every DataFrame
-│   ├── schema_module_1_ingestion.csv   # Schema for raw DataFrames (Module 1)
-│   ├── schema_module_2_cleaning.csv    # Schema for cleaned DataFrames (Module 2)
-│   └── schema_module_3_aggregation.csv # Schema for aggregated DataFrames (Module 3)
 ├── .gitignore
 ├── requirements.txt
 └── README.md
